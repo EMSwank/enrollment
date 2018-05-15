@@ -13,7 +13,7 @@
   <tbody class="main">
     <% @students.each do |student| %>
       <tr>
-        <td><%= student.name %></td>
+        <td><a href="/students/<%= student.id %>"><%= student.name %></td>
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= link_to 'Delete', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
