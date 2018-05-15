@@ -11,4 +11,13 @@ describe "A user visits /students" do
     expect(page).to have_content("Bar")
   end
   
+  it "takes you to the show page when you click on an individual student" do
+    student = Student.create(id: 3, name: "Baz")
+
+    visit students_path
+    click_on "#{student.name}"
+
+    expect(current_path).to eq('students/#{student.id}')
+  end
+  
 end
