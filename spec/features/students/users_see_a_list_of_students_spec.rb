@@ -15,7 +15,7 @@ describe "A user visits /students" do
     student = Student.create(id: 3, name: "Baz")
 
     visit students_path
-save_and_open_page
+
     within ".main" do
     click_on "Baz"
     end

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Address, type: :model do
   describe "validations" do
-    Student.create(id: 1, name: "foo")
+    Student.create(id: 5, name: "foo")
     it { should validate_presence_of(:street) }
     it { should validate_presence_of(:city) }
     it { should validate_presence_of(:state) }
