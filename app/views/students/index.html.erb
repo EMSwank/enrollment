@@ -13,8 +13,6 @@
   <tbody>
     <% @students.each do |student| %>
       <tr>
-      <%    require 'pry'; binding.pry
-%>
         <td><%= student.name %></td>
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>

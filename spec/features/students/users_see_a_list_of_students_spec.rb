@@ -7,8 +7,8 @@ describe "A user visits /students" do
 
     visit students_path
 
-    expect(page).to have_content(student_1)
-    expect(page).to have_content(student_2)
+    expect(page).to have_content("Foo")
+    expect(page).to have_content("Bar")
   end
   
 end
