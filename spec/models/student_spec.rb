@@ -6,4 +6,12 @@ describe Student, type: :model do
 
   end
   
+  describe "relationships" do
+    it "has many addresses" do
+      student = Student.new(name: "Foo")
+      expect(student).to respond_to(:addresses)
+    end
+    
+  end
+  
 end
