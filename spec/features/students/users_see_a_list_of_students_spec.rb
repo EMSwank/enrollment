@@ -15,9 +15,12 @@ describe "A user visits /students" do
     student = Student.create(id: 3, name: "Baz")
 
     visit students_path
-    click_on "#{student.name}"
+save_and_open_page
+    within ".main" do
+    click_on "Baz"
+    end
 
-    expect(current_path).to eq('students/#{student.id}')
+    expect(current_path).to eq("/students/#{student.id}")
   end
   
 end

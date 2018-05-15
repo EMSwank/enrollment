@@ -5,7 +5,10 @@ describe "A user visits /students/new" do
     visit new_student_path
 
     fill_in "student[name]",	with: "Foobar Baz"
-    click_on "Create"
+
+    within ".main" do
+      click_on "Create"
+    end
 
     expect(current_path).to eq("/students/#{Student.last.id}")
     expect(page).to have_content('Foobar Baz')
